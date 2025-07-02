@@ -1,0 +1,20 @@
+[INFO] Checking prerequisites...
+[✓] kubectl is installed
+[✓] helm is installed
+[INFO] Installing KEDA...
+Release "keda" has been installed...
+deployment "keda-operator" successfully rolled out
+[SUCCESS] KEDA installed
+
+[INFO] Deploying application...
+deployment.apps/myapp created
+
+[INFO] Creating ScaledObject...
+scaledobject.keda.sh/myapp-scaler created
+
+[INFO] Checking health for deployment: myapp
+NAME    READY   UP-TO-DATE   AVAILABLE   AGE
+myapp   1/1     1            1           20s
+
+NAME                      READY   STATUS    RESTARTS   AGE
+myapp-6bc7f8bd78-bpgt5    1/1     Running   0          20s
